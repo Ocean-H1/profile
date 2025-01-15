@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oceanhhan</title>
+  <style type="text/tailwindcss">
+    html {
+      font-family: Playpen Sans Variable,cursive;
+    }
+    @layer utilities {
+        .hero {
+          width: 100%;
+          background-image: url('./public/bg-01.jpg');
+          background-position: 50%;
+          background-size: cover;
+          place-items: center;
+        }
+        .bg-base-100\/25 {
+          background-color: 
+          color-mix(in oklab, oklch(97.788% .004 56.375) 25%, transparent);
+        }
+        footer {
+          width: 100%;
+          height: 30px;
+          position: fixed;
+          bottom: 5px;
+        }
+        .record {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="hero bg-opacity-60 flex justify-center items-center h-screen bg-base-100">
+    <div
+      class="bg-base-100/25 py-8 px-12 flex flex-col items-center justify-center rounded-xl shadow-lg bg-gradient-to-b w-[40rem] relative">
+      <div class="h-8 w-32 mb-4">
+        <div class="w-32 h-32 absolute -translate-y-3/4 overflow-hidden rounded-full">
+          <img src="./public/avatar.png" alt="oceanhhan">
+        </div>
+      </div>
+      <div class="font-bold text-xl mb-4 tracking-widest hover:text-white cursor-pointer">@Oceanhhan</div>
+      <div class="details mt-3 mb-10">
+        <ul class="list-disc cursor-pointer">
+          <li class="hover:text-white">Software development engineer based in China.</li>
+          <li class="hover:text-white">Mainly write JavaScript/TypeScript and NodeJs, occasionally Rust.</li>
+          <li class="hover:text-white">Outside of programming, I enjoy games🎮 and anime culture.</li>
+          <li class="hover:text-white">Feel free to reach out!</li>
+        </ul>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://github.com/Ocean-H1"
+          class="flex items-center justify-center font-bold text-sm bg-black active:scale-95 transition w-24 h-11 rounded-lg hover:bg-[oklch(0.40_0_0)] "
+          target="_blank">
+          <svg width="1em" height="1em" class="text-2xl text-white" data-icon="mynaui:brand-github">
+            <symbol id="ai:mynaui:brand-github" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path
+                  d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21">
+                </path>
+                <path
+                  d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316c1.448-1.084 2.188-2.758 2.188-4.411c0-1.16-.44-2.243-1.204-3.16c-.425-.511.819-3.872-.286-3.359c-1.105.514-2.725 1.198-3.574.947c-.909-.268-1.9-.416-2.936-.416c-.9 0-1.766.111-2.574.317c-1.174.298-2.296-.363-3.426-.848c-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41c.965.722 2.174 1.183 3.527 1.41">
+                </path>
+              </g>
+            </symbol>
+            <use href="#ai:mynaui:brand-github"></use>
+          </svg>
+        </a>
+        <a href="https://blog.oceanh.top/"
+          class="flex items-center justify-center font-bold text-sm bg-[#2da5f1] active:scale-95 transition  w-24 h-11 rounded-lg hover:bg-[oklch(0.40_0_0)] "
+          target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512" class="text-white">
+            <path fill="#ffffff"
+              d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32m0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32m-96 16c0-26.5-21.5-48-48-48S0 117.5 0 144v224c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144h-16v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48z" />
+          </svg>
+        </a>
+        <a href="mailto:oceanhhan@gmail.com"
+          class="flex items-center justify-center font-bold text-sm bg-[#174D73] active:scale-95 transition w-24 h-11 rounded-lg hover:bg-[oklch(0.40_0_0)] "
+          target="_blank">
+          <svg width="1em" height="1em" class="text-2xl text-[oklch(0.8_0.05_270)]" data-icon="mynaui:envelope">
+            <symbol id="ai:mynaui:envelope" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="m2.357 7.714l6.98 4.654c.963.641 1.444.962 1.964 1.087c.46.11.939.11 1.398 0c.52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327">
+              </path>
+            </symbol>
+            <use href="#ai:mynaui:envelope"></use>
+          </svg>
+        </a>
+        <a href="https://www.oceanh.top/pages/schedule/"
+          class="flex items-center justify-center font-bold text-sm bg-[#d2c296] active:scale-95 transition w-24 h-11 rounded-lg hover:bg-[oklch(0.40_0_0)] "
+          target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="#ffffff"
+              d="M12 14a1 1 0 1 0-1-1a1 1 0 0 0 1 1m5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1m-5 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1m5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1M7 14a1 1 0 1 0-1-1a1 1 0 0 0 1 1M19 4h-1V3a1 1 0 0 0-2 0v1H8V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1ZM7 18a1 1 0 1 0-1-1a1 1 0 0 0 1 1" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="record fixed">
+      <a href="https://beian.miit.gov.cn" title="record" target="_blank" class="flex gap-1 text-white">
+        <img src="./public/record.png" alt="record_img">
+        <span class="record_num">陕ICP备2022001580号-1</span>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
