@@ -32,13 +32,24 @@
           left: 50%;
           transform: translateX(-50%);
         }
+
+        #loading-bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+          transition: opacity 0.5s ease;
+        }
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <div class="hero bg-opacity-60 flex justify-center items-center h-screen bg-base-100">
+<body class="hero">
+  <div id="loading-bg"></div>
+  <div class="bg-opacity-60 flex justify-center items-center h-screen bg-base-100">
     <div
       class="bg-base-100/25 py-8 px-12 flex flex-col items-center justify-center rounded-xl shadow-lg bg-gradient-to-b w-[40rem] relative">
       <div class="h-8 w-32 mb-4">
@@ -106,12 +117,30 @@
   </div>
   <footer>
     <div class="record fixed">
-      <a href="https://beian.miit.gov.cn" title="record" target="_blank" class="flex gap-1 text-white">
+      <a href="https://beian.miit.gov.cn" title="record" target="_blank" class="flex gap-1">
         <img src="./public/record.png" alt="record_img">
         <span class="record_num">陕ICP备2022001580号-1</span>
       </a>
     </div>
   </footer>
 </body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadingBg = document.getElementById('loading-bg');
+    const body = document.querySelector('body');
+
+    const img = new Image();
+    img.src = './public/bg-01.jpg'; // 与CSS中的背景图地址一致
+
+    img.onload = function () {
+      body.style.opacity = 1;
+      loadingBg.style.opacity = 0;
+      setTimeout(() => {
+        loadingBg.style.display = 'none';
+      }, 500);
+    };
+  });
+</script>
 
 </html>
