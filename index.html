@@ -60,10 +60,18 @@
       <div class="font-bold text-xl mb-4 tracking-widest hover:text-white cursor-pointer">@Oceanhhan</div>
       <div class="details mt-3 mb-10">
         <ul class="list-disc cursor-pointer">
+          <div class="language absolute top-10 right-10 text-xl cursor-pointer hover:text-white w-10 text-center rounded-lg hover:bg-sky-700 select-none" data-lang="en" title="语言">中</div>
           <li class="hover:text-white">Software development engineer based in China.</li>
           <li class="hover:text-white">Mainly write JavaScript/TypeScript and NodeJs, occasionally Rust.</li>
           <li class="hover:text-white">Outside of programming, I enjoy games🎮 and anime culture.</li>
           <li class="hover:text-white">Feel free to reach out!</li>
+        </ul>
+        <ul class="list-disc cursor-pointer hidden">
+          <div class="language absolute top-10 right-10 text-xl cursor-pointer hover:text-white w-10 text-center rounded-lg hover:bg-sky-700 select-none" data-lang="zh" title="language">En</div>
+          <li class="hover:text-white">来自中国的软件开发工程师</li>
+          <li class="hover:text-white">主要编写 JavaScript/TypeScript 和 NodeJs, 偶尔写 Rust</li>
+          <li class="hover:text-white">在业余时间, 我喜欢游戏和动漫</li>
+          <li class="hover:text-white">请随时通过下面的方式联系我!</li>
         </ul>
       </div>
       <div class="flex gap-4">
@@ -141,6 +149,26 @@
       }, 500);
     };
   });
+
+  const languageEle = document.querySelectorAll('.language');
+
+  function toggleLanguage(event) {
+    const target = event.target;
+    const lang = target.getAttribute('data-lang');
+    const lists = document.querySelectorAll('.details ul');
+    console.log(lists);
+    lists.forEach(list => {
+      if (list.querySelector('.language').getAttribute('data-lang') === lang) {
+        list.classList.add('hidden');
+      } else {
+        list.classList.remove('hidden');
+      }
+    });
+  }
+
+  languageEle.forEach(el => {
+    el.addEventListener('click', toggleLanguage);
+  })
 </script>
 
 </html>
